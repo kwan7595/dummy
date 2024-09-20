@@ -92,3 +92,18 @@ class WideResNet(nn.Module):
         ]))
 
         self._initialize()
+    def _initialize(self):
+        for m in self.modules():
+            if isinstance(m, nn.Conv2d):
+                nn.init.kaiming_normal_(m.weight.data, mode="fan_in", nonlinearity="relu")
+                if m.bias is not None:
+                    m.bias.data.zero_()
+            elif isinstance(m, nn.BatchNorm2d):
+                m.weight.data.fill_(1)
+                m.bias.data.zero_()
+            elif isinstance(m, nn.Linear):
+                m.weight.data.zero_()
+                m.bias.data.zero_()
+
+    def forward(self, x):
+        return self.f(x)
