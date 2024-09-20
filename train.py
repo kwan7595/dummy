@@ -28,7 +28,7 @@ testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size,
 classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
-model = WideResNet(28,10)
+model = WideResNet(28,10,0.2,32,10)
 
 device = torch.device('cuda')
 model.to(device)
