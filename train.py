@@ -5,9 +5,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from cnn import Net, WideResNet
-import habana_frameworks.torch.gpu_migration
-import habana_frameworks.torch.core as htcore
-import habana_frameworks.torch.hpu as hthpu
+# import habana_frameworks.torch.gpu_migration
+# import habana_frameworks.torch.core as htcore
+# import habana_frameworks.torch.hpu as hthpu
 
 transform = transforms.Compose(
     [transforms.ToTensor(),
