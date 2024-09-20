@@ -38,6 +38,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.001,momentum=0.9)
 for epoch in range(10):  # loop over the dataset multiple times
 
     running_loss = 0.0
+    model.train()
     for i, data in enumerate(trainloader, 0):
         # get the inputs; data is a list of [inputs, labels]
         inputs, labels = data[0].to(device), data[1].to(device)
@@ -58,6 +59,7 @@ for epoch in range(10):  # loop over the dataset multiple times
     
     correct = 0
     total = 0
+    model.eval()
     # since we're not training, we don't need to calculate the gradients for our outputs
     with torch.no_grad():
         for data in testloader:
