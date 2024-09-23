@@ -4,7 +4,7 @@ This repository contains dummy codes for checking the GAUDI HPU migration toolki
 Will consider training exmaples of
 * MLP
 * CNN
-* Transformers
+* Transformers (soon)
 
 
 Kwanhee Lee
